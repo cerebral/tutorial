@@ -1,0 +1,39 @@
+{
+  "name": "cerebral-get-started",
+  "version": "1.0.0",
+  "description": "A minimum starting point for Cerebral apps",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "@cerebral/react": "^4.0.0-1527192187050",
+    "@cerebral/vue": "^4.0.0-1527192187050",
+    "cerebral": "canary",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-plugin-cerebral": "canary",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-jsx": "^5.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-typescript": "^0.11.0",
+    "parcel-bundler": "^1.6.1",
+    "parcel-plugin-typescript": "^0.7.1",
+    "prettier": "^1.12.1",
+    "typescript": "^2.8.3"
+  },
+  "keywords": [
+    "cerebral"
+  ]
+}
