@@ -1,8 +1,7 @@
-import { state } from 'cerebral/proxy'
-import { Context } from 'cerebral.proxy'
+import { state, Context } from 'cerebral.proxy'
 
 export const getposts =  ({ api }: Context) =>
-  api.getposts().then(posts => ({ posts }))
+  api.getPosts().then(posts => ({ posts }))
 
-export const getUser = ({ api, props }: Context) =>
+export const getUser = ({ api, props }: Context<{ id: string }>) =>
   api.getUser(props.id).then(user => ({ user }))

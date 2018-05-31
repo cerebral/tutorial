@@ -1,15 +1,15 @@
 import keyBy from 'lodash.keyby'
 import { ApiError } from './errors'
-import { posts, User } from './types'
+import { Posts, User } from './types'
 
 const API_URL = 'https://jsonplaceholder.typicode.com'
 
 export const api = {
-  getposts(): Promise<posts> {
+  getPosts(): Promise<Posts> {
     return fetch(`${API_URL}/posts`)
       .then(response => {
         if (response.status >= 200 && response.status < 300) {
-          return response.json().then(posts => keyBy('id', posts))
+          return response.json().then(posts => keyBy(posts, 'id'))
         }
 
         return response.text().then(text => {

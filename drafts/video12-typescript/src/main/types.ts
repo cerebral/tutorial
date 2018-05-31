@@ -1,16 +1,24 @@
+import * as providers from './providers'
+import * as sequences from './sequences'
+
+export type Providers = typeof providers
+
+export type Sequences = typeof sequences
+
 export type Post = {
-	id: string;
+	userId: string;
 	title: string;
 };
 
-export type posts = {
-	[id: string]: Post;
-};
+export type Posts = {
+  [id: string]: Post
+} & {'*'?: string[]}
 
 export type User = {
 	id: string;
 	name: string;
-	website: string;
+  website: string;
+  email: string;
 	address: {
 		street: string;
 		city: string;
@@ -23,13 +31,13 @@ export type Users = {
 
 export type State = {
 	title: string;
-	posts: posts;
+	posts: Posts;
 	users: Users;
 	userModal: {
 		show: boolean;
 		id: string;
 	};
-	isLoadingposts: boolean;
+	isLoadingPosts: boolean;
 	isLoadingUser: boolean;
 	error: string;
 };
