@@ -11,12 +11,16 @@
     "@cerebral/react": "^4.0.0-1527192187050",
     "@cerebral/vue": "^4.0.0-1527192187050",
     "cerebral": "canary",
+    "lodash.keyby": "^4.6.0",
+    "page": "^1.8.6",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {
-    "babel-plugin-cerebral": "canary",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "babel-plugin-cerebral": "^1.0.0-1527708491686",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
