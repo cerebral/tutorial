@@ -8,5 +8,5 @@ const app = App(main, {
   })
 })
 
-const openItemsPage = app.get(sequences.openItemsPage)
-openItemsPage()
+const openpostsPage = app.get(sequences.openpostsPage)
+openpostsPage()

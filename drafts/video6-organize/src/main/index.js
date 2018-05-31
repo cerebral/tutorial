@@ -4,13 +4,13 @@ import * as providers from './providers'
 export default {
   state: {
     title: 'My Project',
-    items: [],
+    posts: [],
     users: {},
     userModal: {
       show: false,
       id: null
     },
-    isLoadingItems: false,
+    isLoadingposts: false,
     isLoadingUser: false,
     error: null
   },

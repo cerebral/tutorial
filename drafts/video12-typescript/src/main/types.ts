@@ -1,35 +1,35 @@
-export type Item = {
-  id: string
-  title: string
-}
+export type Post = {
+	id: string;
+	title: string;
+};
 
-export type Items = {
-  [id: string]: Item
-}
+export type posts = {
+	[id: string]: Post;
+};
 
 export type User = {
-  id: string
-  name: string
-  website: string
-  address: {
-    street: string
-    city: string
-  }
-}
+	id: string;
+	name: string;
+	website: string;
+	address: {
+		street: string;
+		city: string;
+	};
+};
 
 export type Users = {
-  [id: string]: User
-}
+	[id: string]: User;
+};
 
 export type State = {
-  title: string
-  items: Items
-  users: Users
-  userModal: {
-    show: boolean
-    id: string
-  }
-  isLoadingItems: boolean
-  isLoadingUser: boolean
-  error: string
-}
+	title: string;
+	posts: posts;
+	users: Users;
+	userModal: {
+		show: boolean;
+		id: string;
+	};
+	isLoadingposts: boolean;
+	isLoadingUser: boolean;
+	error: string;
+};

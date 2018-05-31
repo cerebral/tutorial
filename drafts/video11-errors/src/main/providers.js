@@ -4,11 +4,11 @@ import { ApiError } from './errors'
 const API_URL = 'https://jsonplaceholder.typicode.com'
 
 export const api = {
-  getItems() {
+  getposts() {
     return fetch(`${API_URL}/posts`)
       .then(response => {
         if (response.status >= 200 && response.status < 300) {
-          return response.json().then(items => keyBy('id', items))
+          return response.json().then(posts => keyBy('id', posts))
         }
 
         return response.text().then(text => {

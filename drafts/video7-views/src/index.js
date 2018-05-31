@@ -13,9 +13,9 @@ const app = App(main, {
   })
 })
 
-const openItemsPage = app.get(sequences.openItemsPage)
+const openpostsPage = app.get(sequences.openpostsPage)
 
-openItemsPage()
+openpostsPage()
 
 render(
   <Container app={app}>

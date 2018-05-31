@@ -1,7 +1,7 @@
 import { state } from 'cerebral/proxy'
 
-export const getItems =  ({ api, get }) =>
-  api.getItems(get(state.postsLimit)).then(items => ({ items }))
+export const getposts =  ({ api, get }) =>
+  api.getposts(get(state.postsLimit)).then(posts => ({ posts }))
 
 export const getUser = ({ api, props }) =>
   api.getUser(props.id).then(user => ({ user }))

@@ -8,18 +8,18 @@ export default ({ app }) => {
 
   app.on('initialized', () => page.start())
 
-  page('/', ({ path }) => app.runSequence(path, sequences.openItemsPage))
+  page('/', ({ path }) => app.runSequence(path, sequences.openpostsPage))
   page('/users/:id', ({ path, params }) => app.runSequence(path, sequences.openUserModal, params))
 
   const state: State = {
     title: 'My Project',
-    items: [],
+    posts: [],
     users: {},
     userModal: {
       show: false,
       id: null
     },
-    isLoadingItems: false,
+    isLoadingposts: false,
     isLoadingUser: false,
     error: null
   }

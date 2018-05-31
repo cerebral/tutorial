@@ -6,19 +6,19 @@ const API_URL = 'https://jsonplaceholder.typicode.com'
 const app = App({
   state: {
     title: 'My Project',
-    items: [],
+    posts: [],
     users: {},
     userModal: {
       show: false,
       id: null
     },
-    isLoadingItems: false,
+    isLoadingposts: false,
     isLoadingUser: false,
     error: null
   },
   providers: {
     api: {
-      getItems() {
+      getposts() {
         return fetch(`${API_URL}/posts`)
           .then(response => response.json())
       },

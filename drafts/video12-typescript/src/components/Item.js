@@ -1,22 +1,19 @@
-import React from 'react'
-import { state, sequences, props } from 'cerebral/proxy'
-import { connect } from '@cerebral/react'
-import Modal from './Modal'
-import Item from './Item'
+import React from 'react';
+import { state, sequences, props } from 'cerebral/proxy';
+import { connect } from '@cerebral/react';
+import Modal from './Modal';
+import Post from './Post';
 
 export default connect(
-  {
-    item: state.items[props.id],
-    openUserModal: sequences.openUserModal
-  },
-  function Item({ item, openUserModal }) {
-    return (
-      <div
-        className="item"
-        onClick={() => openUserModal({ id: item.userId })}
-      >
-        {item.title}
-      </div>
-    )
-  }
-)
+	{
+		Post: state.posts[props.id],
+		openUserModal: sequences.openUserModal
+	},
+	function Post({ Post, openUserModal }) {
+		return (
+			<div className="Post" onClick={() => openUserModal({ id: Post.userId })}>
+				{Post.title}
+			</div>
+		);
+	}
+);

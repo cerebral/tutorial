@@ -2,11 +2,11 @@ import { set } from 'cerebral/factories'
 import { state, props } from 'cerebral/proxy'
 import * as actions from './actions'
 
-export const openItemsPage =  [
-  set(state.isLoadingItems, true),
-  actions.getItems,
-  set(state.items, props.items),
-  set(state.isLoadingItems, false)
+export const openpostsPage =  [
+  set(state.isLoadingposts, true),
+  actions.getposts,
+  set(state.posts, props.posts),
+  set(state.isLoadingposts, false)
 ]
 
 export const openUserModal = [
