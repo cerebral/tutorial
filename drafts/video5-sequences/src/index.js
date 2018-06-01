@@ -23,7 +23,7 @@ const app = App(
 				show: false,
 				id: null
 			},
-			isLoadingposts: false,
+			isLoadingPosts: false,
 			isLoadingUser: false,
 			error: null
 		},
@@ -62,5 +62,5 @@ const app = App(
 	}
 );
 
-const openPostsPage = app.get(sequences.openPostsPage);
-openPostsPage();
+const openUserModal = app.get(sequences.openUserModal);
+openUserModal({ id: 1 });

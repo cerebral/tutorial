@@ -6,7 +6,7 @@ export default ({ app }) => {
 
   app.on('initialized', () => page.start())
 
-  page('/', ({ path }) => app.runSequence(path, sequences.openpostsPage))
+  page('/', ({ path }) => app.runSequence(path, sequences.openPostsPage))
   page('/users/:id', ({ path, params }) => app.runSequence(path, sequences.openUserModal, params))
 
   return {
@@ -18,7 +18,7 @@ export default ({ app }) => {
         show: false,
         id: null
       },
-      isLoadingposts: false,
+      isLoadingPosts: false,
       isLoadingUser: false,
       error: null
     },

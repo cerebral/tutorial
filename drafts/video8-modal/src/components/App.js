@@ -1,34 +1,28 @@
 import React from 'react';
 import { state, sequences } from 'cerebral/proxy';
 import { connect } from '@cerebral/react';
-import UserModal from './UserModal';
+import UserModal from './UserModal'
 
 export default connect(
 	{
 		posts: state.posts,
-		isLoadingposts: state.isLoadingposts,
-		showUserModal: state.userModal.show,
+    isLoadingPosts: state.isLoadingPosts,
+    showUserModal: state.userModal.show,
 		openUserModal: sequences.openUserModal
 	},
-	function App({ posts, isLoadingposts, showUserModal, openUserModal }) {
-		if (isLoadingposts) {
-			return (
-				<div className="content">
-					<h4>Loading posts...</h4>
-				</div>
-			);
-		}
-
+	function App({ posts, isLoadingPosts, showUserModal, openUserModal }) {
 		return (
 			<div className="content">
 				<div className="posts">
-					{posts.map((Post) => (
-						<div key={Post.id} className="Post" onClick={() => openUserModal({ id: Post.userId })}>
+					{isLoadingPosts ? (
+            <h4>Loading posts...</h4>
+          ) : posts.map((post) => (
+						<div key={post.id} className="post" onClick={() => openUserModal({ id: post.userId })}>
 							{Post.title}
 						</div>
 					))}
 				</div>
-				{showUserModal ? <UserModal /> : null}
+        {showUserModal ? <UserModal /> : null}
 			</div>
 		);
 	}

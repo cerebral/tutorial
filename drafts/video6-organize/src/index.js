@@ -8,5 +8,5 @@ const app = App(main, {
   })
 })
 
-const openpostsPage = app.get(sequences.openpostsPage)
-openpostsPage()
+const openUserModal = app.get(sequences.openUserModal)
+openUserModal({ id: 1 })

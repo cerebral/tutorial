@@ -1,5 +1,5 @@
 import { sequence, parallel, set, when } from 'cerebral/factories'
-import { state, props } from 'cerebral.proxy'
+import { state, props } from 'app.proxy'
 import { string } from 'cerebral/tags'
 import * as actions from './actions'
 
@@ -10,7 +10,7 @@ export const openPostsPage = sequence('openPostsPage', [
     true: [],
     false: [
       set(state.isLoadingPosts, true),
-      actions.getposts,
+      actions.getPosts,
       set(state.posts, props.posts),
       set(state.isLoadingPosts, false)
     ]

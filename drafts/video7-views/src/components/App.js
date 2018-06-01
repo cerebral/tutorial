@@ -5,24 +5,18 @@ import { connect } from '@cerebral/react';
 export default connect(
 	{
 		posts: state.posts,
-		isLoadingposts: state.isLoadingposts,
+		isLoadingPosts: state.isLoadingPosts,
 		openUserModal: sequences.openUserModal
 	},
-	function App({ posts, isLoadingposts, openUserModal }) {
-		if (isLoadingposts) {
-			return (
-				<div className="content">
-					<h4>Loading posts...</h4>
-				</div>
-			);
-		}
-
+	function App({ posts, isLoadingPosts, openUserModal }) {
 		return (
 			<div className="content">
 				<div className="posts">
-					{posts.map((Post) => (
-						<div key={Post.id} className="Post" onClick={() => openUserModal({ id: Post.userId })}>
-							{Post.title}
+					{isLoadingPosts ? (
+              <h4>Loading posts...</h4>
+          ) : posts.map((post) => (
+						<div key={post.id} className="post" onClick={() => openUserModal({ id: post.userId })}>
+							{post.title}
 						</div>
 					))}
 				</div>

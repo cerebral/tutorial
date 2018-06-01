@@ -8,9 +8,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@cerebral/react": "^4.0.0-1527192187050",
-    "@cerebral/vue": "^4.0.0-1527192187050",
-    "cerebral": "canary",
+    "@cerebral/react": "^4.0.0-1527840012018",
+    "@cerebral/vue": "^4.0.0-1527883977316",
+    "cerebral": "^5.0.0-1527883977316",
     "lodash.keyby": "^4.6.0",
     "page": "^1.8.6",
     "react": "^16.4.0",

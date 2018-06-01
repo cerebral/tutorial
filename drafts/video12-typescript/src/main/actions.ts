@@ -1,6 +1,6 @@
-import { state, Context } from 'cerebral.proxy'
+import { state, Context } from 'app.proxy'
 
-export const getposts =  ({ api }: Context) =>
+export const getPosts = ({ api }: Context) =>
   api.getPosts().then(posts => ({ posts }))
 
 export const getUser = ({ api, props }: Context<{ id: string }>) =>

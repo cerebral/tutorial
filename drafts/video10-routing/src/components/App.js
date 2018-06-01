@@ -7,22 +7,17 @@ import Post from './Post';
 export default connect(
 	{
 		postsId: state.posts['*'],
-		isLoadingposts: state.isLoadingposts,
+		isLoadingPosts: state.isLoadingPosts,
 		showUserModal: state.userModal.show
 	},
-	function App({ postsId, isLoadingposts, showUserModal }) {
-		if (isLoadingposts) {
-			return (
-				<div className="content">
-					<h4>Loading posts...</h4>
-				</div>
-			);
-		}
-
+	function App({ postsId, isLoadingPosts, showUserModal }) {
 		return (
 			<div className="content">
-				<div className="posts">{postsId.map((id) => <Post key={id} id={id} />)}</div>
-				{showUserModal ? <UserModal /> : null}
+        <div className="posts">
+          {isLoadingPosts ? (
+            <h4>Loading posts...</h4>
+          ) : postsId.map((id) => <Post key={id} id={id} />)}</div>
+				  {showUserModal ? <UserModal /> : null}
 			</div>
 		);
 	}

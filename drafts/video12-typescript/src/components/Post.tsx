@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { state, sequences, props } from 'cerebral.proxy';
+import { state, sequences, props } from 'app.proxy';
 import { connect } from '@cerebral/react';
 
 type Props = {
@@ -7,11 +7,10 @@ type Props = {
 }
 
 const deps = {
-  post: state.posts[props.id],
-  openUserModal: sequences.openUserModal
+  post: state.posts[props.id]
 }
 
-const Post: React.SFC<Props & typeof deps> = ({ post, openUserModal }) => {
+const Post: React.SFC<Props & typeof deps> = ({ post }) => {
   return (
     <a className="post" href={`/users/${post.userId}`}>
       {post.title}

@@ -3,10 +3,10 @@ import keyBy from 'lodash.keyby'
 const API_URL = 'https://jsonplaceholder.typicode.com'
 
 export const api = {
-  getposts() {
+  getPosts() {
     return fetch(`${API_URL}/posts`)
       .then(response => response.json())
-      .then(posts => keyBy('id', posts))
+      .then(posts => keyBy(posts, 'id'))
   },
   getUser(id) {
     return fetch(`${API_URL}/users/${id}`)

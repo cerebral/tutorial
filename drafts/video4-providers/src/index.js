@@ -12,13 +12,13 @@ const app = App({
       show: false,
       id: null
     },
-    isLoadingposts: false,
+    isLoadingPosts: false,
     isLoadingUser: false,
     error: null
   },
   providers: {
     api: {
-      getposts() {
+      getPosts() {
         return fetch(`${API_URL}/posts`)
           .then(response => response.json())
       },

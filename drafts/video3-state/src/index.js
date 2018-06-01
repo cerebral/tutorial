@@ -10,7 +10,7 @@ const app = App({
       show: false,
       id: null
     },
-    isLoadingposts: false,
+    isLoadingPosts: false,
     isLoadingUser: false,
     error: null
   }

@@ -1,7 +1,7 @@
 const API_URL = 'https://jsonplaceholder.typicode.com'
 
 export const api = {
-  getposts() {
+  getPosts() {
     return fetch(`${API_URL}/posts`)
       .then(response => response.json())
   },

@@ -3,21 +3,21 @@ import { state, props } from 'cerebral/proxy'
 import { string } from 'cerebral/tags'
 import * as actions from './actions'
 
-export const openpostsPage =  sequence('openpostsPage', [
-  when(state.posts, posts => posts.length),
+export const openPostsPage =  sequence('openPostsPage', [
+  when(state.posts, posts => Object.keys(posts).length),
   {
     true: [],
     false: [
-      set(state.isLoadingposts, true),
-      actions.getposts,
+      set(state.isLoadingPosts, true),
+      actions.getPosts,
       set(state.posts, props.posts),
-      set(state.isLoadingposts, false)
+      set(state.isLoadingPosts, false)
     ]
   }
 ])
 
 export const openUserModal = parallel('openUserModal', [
-  openpostsPage,
+  openPostsPage,
   [
     set(state.userModal.id, props.id),
     set(state.userModal.show, true),

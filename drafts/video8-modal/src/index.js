@@ -12,9 +12,9 @@ const app = App(main, {
   })
 })
 
-const openpostsPage = app.get(sequences.openpostsPage)
+const openPostsPage = app.get(sequences.openPostsPage)
 
-openpostsPage()
+openPostsPage()
 
 render(
   <Container app={app}>
