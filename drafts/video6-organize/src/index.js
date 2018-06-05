@@ -1,4 +1,4 @@
-import App from 'cerebral'
+import App, { sequences } from 'cerebral'
 import Devtools from 'cerebral/devtools'
 import main from './main'
 

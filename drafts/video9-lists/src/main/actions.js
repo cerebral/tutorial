@@ -1,4 +1,4 @@
-import { state } from 'cerebral/proxy'
+import { state } from 'cerebral'
 
 export const getPosts = ({ api }) =>
   api.getPosts().then(posts => ({ posts }))

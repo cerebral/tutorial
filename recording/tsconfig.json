@@ -3,7 +3,7 @@
     "module": "es2015",
     "baseUrl": "./src",
     "paths": {
-      "cerebral.proxy": ["cerebral.proxy.ts"]
+      "app.cerebral": ["app.cerebral.ts"]
     },
     "jsx": "react"
   }

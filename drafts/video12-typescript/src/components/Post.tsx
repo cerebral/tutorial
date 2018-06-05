@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { state, sequences, props } from 'app.proxy';
+import { state, sequences, props } from 'app.cerebral';
 import { connect } from '@cerebral/react';
 
 type Props = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { state, sequences } from 'cerebral/proxy';
+import { state, sequences } from 'cerebral';
 import { connect } from '@cerebral/react';
 import UserModal from './UserModal'
 

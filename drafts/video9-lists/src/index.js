@@ -1,6 +1,5 @@
-import App from 'cerebral'
+import App, { sequences } from 'cerebral'
 import Devtools from 'cerebral/devtools'
-import { sequences } from 'cerebral/proxy'
 import React from 'react'
 import { render } from 'react-dom'
 import { Container } from '@cerebral/react'

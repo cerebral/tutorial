@@ -1,5 +1,5 @@
 import { sequence, parallel, set, when } from 'cerebral/factories'
-import { state, props } from 'app.proxy'
+import { state, props } from 'app.cerebral'
 import { string } from 'cerebral/tags'
 import * as actions from './actions'
 

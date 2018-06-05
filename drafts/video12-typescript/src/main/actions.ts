@@ -1,4 +1,4 @@
-import { state, Context } from 'app.proxy'
+import { state, Context } from 'app.cerebral'
 
 export const getPosts = ({ api }: Context) =>
   api.getPosts().then(posts => ({ posts }))

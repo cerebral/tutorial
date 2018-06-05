@@ -1,6 +1,5 @@
+import { string, state, props } from 'cerebral'
 import { sequence, parallel, set, when } from 'cerebral/factories'
-import { state, props } from 'cerebral/proxy'
-import { string } from 'cerebral/tags'
 import * as actions from './actions'
 
 export const openPostsPage =  sequence('openPostsPage', [

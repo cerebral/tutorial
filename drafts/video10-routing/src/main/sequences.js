@@ -1,8 +1,8 @@
+import { state, props } from 'cerebral'
 import { sequence, parallel, set, when } from 'cerebral/factories'
-import { state, props } from 'cerebral/proxy'
 import * as actions from './actions'
 
-export const openPostsPage =  sequence('openPostsPage', [
+export const openPostsPage = sequence('openPostsPage', [
   when(state.posts, posts => Object.keys(posts.length)),
   {
     true: [],

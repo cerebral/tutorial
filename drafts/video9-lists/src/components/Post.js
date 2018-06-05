@@ -1,5 +1,5 @@
 import React from 'react';
-import { state, sequences, props } from 'cerebral/proxy';
+import { state, sequences, props } from 'cerebral';
 import { connect } from '@cerebral/react';
 import Post from './Post';
 

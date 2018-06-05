@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { state } from 'app.proxy'
+import { state } from 'app.cerebral'
 import { connect } from '@cerebral/react'
 
 const deps = {

@@ -1,5 +1,5 @@
+import { state, props } from 'cerebral'
 import { set } from 'cerebral/factories'
-import { state, props } from 'cerebral/proxy'
 import * as actions from './actions'
 
 export const openPostsPage =  [

@@ -1,6 +1,5 @@
-import App from 'cerebral';
+import App, { state, props, sequences } from 'cerebral';
 import Devtools from 'cerebral/devtools';
-import { state, props, sequences } from 'cerebral/proxy';
 import { set } from 'cerebral/factories';
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
